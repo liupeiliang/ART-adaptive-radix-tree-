@@ -1,21 +1,19 @@
 #ifndef ART_H
 #define ART_H
 
-#include <iostream>
-
 namespace art{
   
-template <class T> class art{
+template <class T> class Art{
 public:
-  ~art();
-  T *get(const char *key) const;
-  bool set(const char *key, T *value);
-  bool del(const char *key);
+    ~art();
+    T *getValue(const char *key) const;
+    bool setValue(const char *key, T *value);
+    bool delValue(const char *key);
   
   
 
 private:
-  //inner_node<T> *root;
+    inner_node<T> *root;
   
 };
 }

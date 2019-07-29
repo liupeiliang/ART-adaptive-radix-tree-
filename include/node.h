@@ -1,19 +1,17 @@
 #ifndef NODE_H
 #define NODE_H
 
-#include <iostream>
-
 namespace art{
-template <class T> node{
+template <class T> Node{
 public:
-  virtual ~node() = default;
-  node() = default;
+    virtual ~Node() = default;
+    Node() = default;
 
-  virtual bool is_leaf() const = 0;
-  int check_prefix(const char *key) const;
+    virtual bool isLeaf() const = 0;
+    int checkPrefix(const char *key) const;
 
-  char *prefix;
-  uint16_t prefix_len_ = 0;
+    char *prefix;
+    uint16_t prefixLength = 0;
   
 };
 }
